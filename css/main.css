@@ -2,11 +2,7 @@
     padding: 0;
     margin: 0;
 }
-
-.bienvenida {
-    /* background: linear-gradient(rgb(23, 23, 23) 65%); */
-    background: linear-gradient(to bottom right, #530060, #e19);
-}
+/*seccion flex*/
 
 [class^="container-flex-"] {
     display: flex;
@@ -30,9 +26,7 @@
     flex-direction: column;
 }
 
-.btn-success {
-    background: linear-gradient(to bottom right, #530060, #e19);
-}
+/*style*/
 
 .vh100 {
     height: 100vh;
@@ -40,6 +34,10 @@
 
 .logo {
     width: 25%;
+}
+
+.px100{
+    height: 100px;
 }
 
 .logo_2 {
@@ -52,12 +50,29 @@
     width: 53%;
 }
 
+.bienvenida, .btn-success {
+    background: linear-gradient(to bottom right, #530060, #e19);
+}
+
 .bienvenida2 {
     background-image: url('../assets/images/citylarge.gif');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     display: none;
+}
+
+/*ventana signup*/
+
+#signup {
+    background: #000;
+    color: white;
+}
+
+.gemelos {
+    display: flex;
+    justify-content: space-around;
+    width: 157px;
 }
 
 @media (min-width: 1280px) {
