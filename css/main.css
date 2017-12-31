@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 /*seccion flex*/
 
@@ -63,8 +64,31 @@
 }
 
 /*ventana signup*/
-
 #signup {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.btnsignup, #test {
+    align-self: flex-start;
+}
+
+.dropdownsignup {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+
+
+
+
+
+/*ventana register*/
+#register {
     background: #000;
     color: white;
 }
