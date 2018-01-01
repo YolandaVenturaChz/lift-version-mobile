@@ -1,138 +1,113 @@
     * {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    box-sizing: border-box;
-}
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        box-sizing: border-box;
+    }
+    /*seccion flex*/
 
+    [class^="container-flex-"] {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-/*seccion flex*/
+    .container-flex-column {
+        justify-content: center;
+    }
 
-[class^="container-flex-"] {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .container-flex-colu {
+        justify-content: space-around;
+    }
 
-.container-flex-column {
-    justify-content: center;
-}
+    .flex-item {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.container-flex-colu {
-    justify-content: space-around;
-}
+    /*style*/
 
-.flex-item {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-}
+    .vh100 {height: 100vh;}
 
+    .logo {width: 25%;}
 
-/*style*/
+    .px100 {height: 100px;}
 
-.vh100 {
-    height: 100vh;
-}
-
-.logo {
-    width: 25%;
-}
-
-.px100 {
-    height: 100px;
-}
-
-.logo_2 {
-    width: 30%;
-    align-self: flex-end;
-    margin-right: 40px;
-}
-
-.logo_1 {
-    width: 53%;
-}
-
-.bienvenida,
-.btn-success {
-    background: linear-gradient(to bottom right, #530060, #e19);
-}
-
-.bienvenida2 {
-    background-image: url('../assets/images/citylarge.gif');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: none;
-}
-
-
-/*ventana signup*/
-
-#signup {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    height: 408px;
-}
-
-.dropdownsignup {
-    display: flex;
-    width: 280px;
-    justify-content: space-between;
-}
-
-.btnsignup,
-#test {
-    align-self: flex-start;
-}
-
-#test {
-    margin-top: 1em;
-    height: 40px;
-}
-
-.ulsignup {
-    margin-top: 1em;
-}
-
-.headersignup {
-    box-shadow: inset 0px -2px 1px #dbd8d8;
-}
-
-#btndisabled {
-    height: 14%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column-reverse;
-}
-
-
-/*ventana register*/
-
-#register {
-    background: #000;
-    color: white;
-}
-
-.gemelos {
-    display: flex;
-    justify-content: space-around;
-    width: 157px;
-}
-
-@media (min-width: 1280px) {
     .logo_2 {
-        width: 20%;
+        width: 30%;
         align-self: flex-end;
-        margin-right: 465px;
+        margin-right: 40px;
     }
-    .logo_1 {
-        width: 10%;
+
+    .logo_1 {width: 53%;}
+
+    .welcome,
+    .btn-success,
+    .btn-success:hover,
+    .btn-success:active {
+        background: linear-gradient(to bottom right, #530060, #e19);
     }
+
+    .welcome2 {
+        background-image: url('../assets/images/citylarge.gif');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: none;
+    }
+    /*ventana signup*/
+
     #signup {
-        height: 535px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        height: 408px;
     }
-}    
+
+    .dropdownsignup {
+        display: flex;
+        width: 280px;
+        justify-content: space-between;
+    }
+
+    .btnsignup, #test {
+        align-self: flex-start;
+    }
+
+    #test, #test1 {
+        margin-top: 1em;
+        height: 40px;
+    }
+
+    .ulsignup {margin-top: 1em;}
+
+    .headersignup {box-shadow: inset 0px -2px 1px #dbd8d8;}
+
+    /*ventana register*/
+
+    #register {
+        background: #000;
+        color: white;
+    }
+
+    .btndoblue {
+        display: flex;
+        justify-content: space-around;
+        width: 157px;
+    }
+
+    @media (min-width: 1280px) {
+
+        .logo_2 {
+            width: 20%;
+            align-self: flex-end;
+            margin-right: 465px;
+        }
+
+        .logo_1 {width: 10%;}
+
+        #signup {height: 535px;}
+    }
