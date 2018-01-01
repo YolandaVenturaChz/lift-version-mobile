@@ -14,17 +14,20 @@
 </head>
 
 <body>
+    <header class="container-flex-column headersignup">
+        <a href="../index.html" type="button" class="btn btn-success btnsignup">
+            <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+        </a>
+        <h1>Sing Up</h1>
+        <h3>Join now for free ride credit</h3>
+    </header>
     <section id="signup" class="grad70 vh100 ">
-
-        <div class="container-fluid  vh100">
-            <header class="container-flex-column">
-                <h1>Sing Up</h1>
-                <h3>Join now for free ride credit</h3>
-            </header>
+       
+        <div class="container-fluid ">
 
             <div class="dropdownsignup">
                 <div class=" row ">
-                    <ul>
+                    <ul class="ulsignup">
                         <li>
                             <a href="#" class="btn">
                                 <picture>
@@ -34,21 +37,21 @@
                             </a>
                         </li>
                         <li style="display:none">
-                            <a href="#" class="btn btn1">
+                            <a href="#" class="btn">
                                 <span>
                                     <img src="../assets/images/mexico.png" alt="mexico">
                                 </span>
                             </a>
                         </li>
                         <li style="display:none">
-                            <a href="#" class="btn btn1">
+                            <a href="#" class="btn">
                                 <span>
                                     <img src="../assets/images/usa.png" alt="usa">
                                 </span>
                             </a>
                         </li>
                         <li style="display:none">
-                            <a href="#" class="btn btn1">
+                            <a href="#" class="btn">
                                 <span>
                                     <img src="../assets/images/colombia.png" alt="colombia">
                                 </span>
@@ -57,20 +60,18 @@
                     </ul>
                 </div>
 
-                <input type="text" id="test" value="">
+                <input type="text" id="test" value=""  placeholder="52 +">
             </div>
         </div>
-        <div>
+        <p>We´ll send a text to verify your phone</p>
+        <div class="flex-item">
             <picture>
-                <img src="../assets/images/lift.gif" class="img-responsive " alt="logo">
+                <img src="../assets/images/lift.gif" class="img-responsive px100" alt="logo">
             </picture>
         </div>
-        <a href="../index.html" type="button" class="btn btn-success btnsignup">
-            <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-        </a>
-
-        <button class="px100 " disabled>Show Value</button>
-
+    <a href="" id="btndisabled" class="btn btn-large disabled" >Next</a> 
+    
+   
     </section>
     <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
     <script src="../js/signup.js"></script>

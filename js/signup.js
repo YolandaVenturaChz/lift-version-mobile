@@ -1,41 +1,44 @@
 $(document).ready(function () {
-     
+
     function first() {
         $('li:first-child').click(function () {
-             $(this).siblings().fadeToggle('fast');
-            $(this).css('background', ' linear-gradient(to bottom right, #530060, #e19)');
-            $(this).siblings().css('background', 'none');
-            
+            $(this).siblings().fadeToggle('fast');
+
+
         });
 
         $('li:eq(1),li:eq(2),li:eq(3)').click(function () {
             event.preventDefault();
-             $(this).siblings().fadeToggle('fast');
-            $(this).css('background', ' linear-gradient(to bottom right, #530060, #e19)');
-            $(this).siblings().css('background', 'none');
+            $(this).siblings().fadeToggle('fast');
+
         })
     }
-     first();
+    first();
 
     $('input').keyup(function () {
-         event.preventDefault();
+        event.preventDefault();
 
-         var valor = $("input").val();
-         console.log(valor.length);
-         if (valor.length < 10) {
-             $('button').attr('disabled', true);
-            $('button').removeClass('btn-success');
-        
+        var valor = $("input").val();
+        console.log(valor.length);
+        if (valor.length < 10 ) {
+            $('#btndisabled').addClass('disabled');
+            $('#btndisabled').removeClass('enabled');
 
-         } else if (valor.length == 10) {
-             $('button').attr('disabled', false);
-             $('button').addClass('btn-success');
-         } {
-            
-             
-         }
+
+        } else if (valor.length == 10 ) {
+            $('#btndisabled').removeClass('disabled');
+            $('#btndisabled').addClass('enabled, btn-success');
+         
+        }else{
+            $('#btndisabled').addClass('disabled');
+        }
+    
+       
+    
     });
-   /*codigo aleatorio de laboratoria*/
+
+    /*codigo aleatorio de laboratoria*/
+    // Codigo aleatorio LAB-000
     function rand_code(chars, lon) {
         code = '';
         for (x = 0; x < lon; x++) {
@@ -44,15 +47,21 @@ $(document).ready(function () {
         }
         return code;
     }
-    rand_code();
-
     caracteres = '0123456789';
     longitud = 3;
+    // Mostrando codigo aleatorio
+    $('#btndisabled').click(function () {
+        event.preventDefault();
+        set = rand_code(caracteres, longitud);
+        alert('Tu codigo LAB -' + set);
+        $('#btndisabled').attr('href', 'regiter.html');
+      
+        
+    });
+
     /* Mostrando codigo aleatorio*/
-    
+
 
 
 
 });
-
-

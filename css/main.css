@@ -1,13 +1,15 @@
-* {
+    * {
     padding: 0;
     margin: 0;
     list-style: none;
+    box-sizing: border-box;
 }
+
+
 /*seccion flex*/
 
 [class^="container-flex-"] {
     display: flex;
-    margin: auto;
     flex-direction: column;
     align-items: center;
 }
@@ -21,11 +23,12 @@
 }
 
 .flex-item {
-    align-items: center;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
+    align-items: center;
 }
+
 
 /*style*/
 
@@ -37,7 +40,7 @@
     width: 25%;
 }
 
-.px100{
+.px100 {
     height: 100px;
 }
 
@@ -51,7 +54,8 @@
     width: 53%;
 }
 
-.bienvenida, .btn-success {
+.bienvenida,
+.btn-success {
     background: linear-gradient(to bottom right, #530060, #e19);
 }
 
@@ -63,31 +67,51 @@
     display: none;
 }
 
+
 /*ventana signup*/
+
 #signup {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-}
-
-.btnsignup, #test {
-    align-self: flex-start;
+    justify-content: space-between;
+    text-align: center;
+    height: 408px;
 }
 
 .dropdownsignup {
     display: flex;
-    justify-content: space-around;
+    width: 280px;
+    justify-content: space-between;
+}
+
+.btnsignup,
+#test {
+    align-self: flex-start;
+}
+
+#test {
+    margin-top: 1em;
+    height: 40px;
+}
+
+.ulsignup {
+    margin-top: 1em;
+}
+
+.headersignup {
+    box-shadow: inset 0px -2px 1px #dbd8d8;
+}
+
+#btndisabled {
+    height: 14%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
 }
 
 
-
-
-
-
-
-
-
 /*ventana register*/
+
 #register {
     background: #000;
     color: white;
@@ -108,4 +132,7 @@
     .logo_1 {
         width: 10%;
     }
-}
+    #signup {
+        height: 535px;
+    }
+}    
