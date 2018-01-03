@@ -24,7 +24,7 @@ $(document).ready(function () {
 
     $('#test').keyup(function () {
         event.preventDefault();
-        var REGPHONE = /^\d+$/;
+        
         var valor = $("#test").val();
         console.log(valor.length);
         if (valor.length < 10) {
