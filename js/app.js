@@ -1,11 +1,11 @@
 $(document).ready(function () {
-    
+
     function time() {
         $("#city").delay(4000).fadeIn();
         $("#splash").delay(4001).fadeOut();
     }
-    time(); 
-    
+    time();
+
     function first() {
         $('li:first-child').click(function () {
             $(this).siblings().fadeToggle('fast');
@@ -17,32 +17,33 @@ $(document).ready(function () {
             event.preventDefault();
             $(this).siblings().fadeToggle('fast');
 
-        })
+        });
     }
     first();
- /*funcion de desabilitar button*/
+    /*funcion de desabilitar button*/
 
     $('#test').keyup(function () {
         event.preventDefault();
-
+        var REGPHONE = /^\d+$/;
         var valor = $("#test").val();
         console.log(valor.length);
-        if (valor.length < 10 ) {
+        if (valor.length < 10) {
             $('#btndisabled').addClass('disabled');
             $('#btndisabled').removeClass('enabled');
 
-        } else if (valor.length == 10 ) {
+        } else if (valor.length == 10) {
             $('#btndisabled').removeClass('disabled');
             $('#btndisabled').addClass('enabled, btn-success');
-         
-        }else{
+
+        } else {
             $('#btndisabled').addClass('disabled');
         }
-    
+
     });
 
+
     /*codigo aleatorio de laboratoria*/
-   
+
     function rand_code(chars, lon) {
         code = '';
         for (x = 0; x < lon; x++) {
@@ -53,19 +54,18 @@ $(document).ready(function () {
     }
     caracteres = '0123456789';
     longitud = 3;
-    
-     /* Mostrando codigo aleatorio de laboratoria y agregando enlace para la siguiente ventana*/
+
+    /* Mostrando codigo aleatorio de laboratoria y agregando enlace para la siguiente ventana*/
 
     $('#btndisabled').click(function () {
         set = rand_code(caracteres, longitud);
         alert('Tu codigo LAB -' + set);
-        $('#btndisabled').attr('href', 'verifique.html');        
+        $('#btndisabled').attr('href', 'verifique.html');
     });
 
-    
 
-/**ventana verifique */
 
+    /**ventana verifique */
     $('#test1').keyup(function () {
         event.preventDefault();
 
@@ -78,7 +78,7 @@ $(document).ready(function () {
         } else if (valor.length == 3) {
             $('#btndisabled1').removeClass('disabled');
             $('#btndisabled1').addClass('enabled, btn-success');
-            $('#btndisabled1').attr('href', 'regiter.html'); 
+            $('#btndisabled1').attr('href', 'regiter.html');
 
         } else {
             $('#btndisabled1').addClass('disabled');
@@ -86,21 +86,19 @@ $(document).ready(function () {
 
     });
 
-/**ventana regiter */
+    /**ventana regiter */
 
- var $email = $('#inputEmail');
+    var $email = $('#laboratoria');
 
- //asociando eventos a los inputs
- $email.on('input', function () {
-     console.log(event.target.value);
-     console.log($(this).val());
-     var PATERNEMAIL = /^[a-zA-Z0-9\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,3}$/;
-     console.log(PATERNEMAIL.test($(this).val()));
-
- });
- 
+    //asociando eventos a los inputs
+    $email.on('input', function () {
+        //console.log(event.target.value);  
+    })
 
 
+ //$('#laboatoria').keyup(function () {
+    event.preventDefault();
 
+    
 
 });
